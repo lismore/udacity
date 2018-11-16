@@ -2,6 +2,7 @@
  * Infinite Loop Example - useful for embedded systems
  * To compile: $ g++ -o infiniteLoop infiniteLoop.cpp
  * To execute: $ ./infiniteLoop 
+ * gpgtest
  * */
 
 #include <iostream>
