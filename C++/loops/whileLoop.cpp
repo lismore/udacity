@@ -13,17 +13,29 @@
 
 #include <iostream>
 #include <sstream>
+#include <time.h> //added for the random number generator seed
+#include <cstdlib>//added to use the rand function
 
 int main()
 {
     //use 55 as the number to be guessed
-    int targetguess = 55;
+    int targetguess;
     int guess = -1;
+    std::string userString;
+
+    srand(time(NULL));  //set the seed for the random number generator
+    targetguess = rand() %100 + 1; //generate the 'random' number
 
     while(guess != targetguess)
     {
         std::cout<<"Guess a number between 0 and 100: ";
-        std::cin>>guess;
+
+        std::getline (std::cin,userString);
+
+        //convert to an int
+        std::stringstream(userString) >> guess;
+
+        std::cout << userString << "\n";
 
         if(guess > targetguess)
             std::cout<<"Your guess is too high\n";
