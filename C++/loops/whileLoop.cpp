@@ -19,16 +19,18 @@ int main()
         std::cout<<"Guess a number between 0 and 100: ";
         std::cin>>guess;
 
-        if(guess > targetguess){
+        if(guess > targetguess)
+            std::cout<<"Your guess is too high\n";
+        else if(guess < targetguess)
+            std::cout<<"Your guess is too low\n";
+        else
+            std::cout<<"You guessed the target!\n";
 
-            std::cout << "Guess Lower <"; 
-            
-        }else{
-
-            std::cout << "Guess Higher >";
+        if(guess == -1)
+        {
+            std::cout<<"good bye!";
+            break;
         }
-
-        std::cout<<guess<<"\n";
     }
 
     return 0;
