@@ -22,6 +22,7 @@ int main()
         if(guess > targetguess){
 
             std::cout << "Guess Lower <"; 
+            
         }else{
 
             std::cout << "Guess Higher >";
