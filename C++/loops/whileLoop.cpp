@@ -3,7 +3,13 @@
 **Tell the user if the guess is too high or too low. 
 **The user enters -1  or guesses the target number to end 
 **the program.
+*
+*  To compile: $ g++ -o whileLoop whileLoop.cpp
+*  To executeL $ ./whileLoop
+*
 */
+
+
 
 #include <iostream>
 #include <sstream>
